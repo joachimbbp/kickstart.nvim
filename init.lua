@@ -167,7 +167,56 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
+  --lets put iron here
+  --
+  {
+    'hkupty/iron.nvim',
+    config = function()
+      local iron = require 'iron.core'
+      local view = require 'iron.view'
+      local common = require 'iron.fts.common'
 
+      iron.setup {
+        config = {
+          scratch_repl = true,
+
+          repl_open_cmd = view.split.vertical.botright(0.3),
+          repl_definition = {
+            sh = { command = { 'zsh' } },
+            python = {
+              command = { 'ipython', '--no-autoindent' },
+              format = common.bracketed_paste_python,
+              block_dividers = { '# %%', '#%%' },
+            },
+          },
+          repl_filetype = function(_, ft)
+            return ft
+          end,
+          highlight_last = false,
+          ignore_blank_lines = true,
+          preferred = {
+            python = {
+              view = view.split.vertical.botright(0.3), -- ⬅️ OR: view.float.win()
+            },
+          },
+        },
+        keymaps = {
+          send_motion = '<space>sc',
+          visual_send = '<space>sc',
+          send_file = '<space>sf',
+          send_line = '<space>sl',
+          send_mark = '<space>sm',
+          mark_motion = '<space>mc',
+          mark_visual = '<space>mc',
+          remove_mark = '<space>md',
+          cr = '<space>s<cr>',
+          interrupt = '<space>s<space>',
+          exit = '<space>sq',
+          clear = '<space>cl',
+        },
+      }
+    end,
+  },
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
   -- If you prefer to call `setup` explicitly, use:
   --    {
