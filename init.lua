@@ -200,19 +200,20 @@ require('lazy').setup({
             },
           },
         },
+        --Keymaps start with 'r' for 'REPL'
         keymaps = {
-          send_motion = '<space>sc',
-          visual_send = '<space>sc',
-          send_file = '<space>sf',
-          send_line = '<space>sl',
-          send_mark = '<space>sm',
-          mark_motion = '<space>mc',
-          mark_visual = '<space>mc',
-          remove_mark = '<space>md',
-          cr = '<space>s<cr>',
-          interrupt = '<space>s<space>',
-          exit = '<space>sq',
-          clear = '<space>cl',
+          send_motion = '<space>rc',
+          visual_send = '<space>rc',
+          send_file = '<space>rf',
+          send_line = '<space>rl',
+          send_mark = '<space>rm',
+          mark_motion = '<space>ra',
+          mark_visual = '<space>rc',
+          remove_mark = '<space>rd',
+          cr = '<space>r<cr>',
+          interrupt = '<space>r<space>',
+          exit = '<space>rq',
+          clear = '<space>rl',
         },
       }
     end,
@@ -465,8 +466,8 @@ require('lazy').setup({
       -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
       -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
       -- processes that communicate with some "client" - in this case, Neovim!
-      --
-      -- LSP provides Neovim with features like:
+      --neovim/nvim
+      -- LSP provides Neovim with features like:neovim/nvim
       --  - Go to definition
       --  - Find references
       --  - Autocompletion
@@ -739,7 +740,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        python = { 'isort', 'black' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -917,7 +918,7 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'zig', 'python' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
