@@ -20,6 +20,18 @@ vim.cmd [[
   xnoremap aa dd
 ]]
 
+-- cyberdream stuff:
+-- Add a custom keybinding to toggle the colorscheme
+vim.api.nvim_set_keymap('n', '<leader>tt', ':CyberdreamToggleMode<CR>', { noremap = true, silent = true })
+-- -- The event data property will contain a string with either "default" or "light" respectively
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'CyberdreamToggleMode',
+  callback = function(event)
+    -- Your custom code here!
+    -- For example, notify the user that the colorscheme has been toggled
+    print('Switched to ' .. event.data .. ' mode!')
+  end,
+})
 --
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -871,27 +883,38 @@ require('lazy').setup({
     },
   },
 
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+  -- { -- You can easily change to a different colorscheme.
+  --   -- Change the name of the colorscheme plugin below, and then
+  --   -- change the command in the config to whatever the name of that colorscheme is.
+  --   --
+  --   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+  --   'folke/tokyonight.nvim',
+  --   priority = 1000, -- Make sure to load this before all the other start plugins.
+  --   config = function()
+  --     ---@diagnostic disable-next-line: missing-fields
+  --     require('tokyonight').setup {
+  --       styles = {
+  --         comments = { italic = true }, -- Disable italics in comments
+  --       },
+  --     }
+  --     -- Load the colorscheme here.
+  --     -- Like many other themes, this one has different styles, and you could load
+  --     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+  --     -- vim.cmd.colorscheme 'retrobox'
+  --   end,
+  -- },
+  {
+    'scottmckendry/cyberdream.nvim',
+    lazy = false,
+    priority = 1000,
     config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require('tokyonight').setup {
-        styles = {
-          comments = { italic = true }, -- Disable italics in comments
-        },
-      }
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      -- vim.cmd.colorscheme 'retrobox'
+      vim.cmd.colorscheme 'cyberdream'
+      -- require('cyberdream').setup {
+      --   variant = 'default',
+      --   transparent = false,
+      -- }
     end,
   },
-  --
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
