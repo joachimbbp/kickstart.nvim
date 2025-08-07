@@ -1,3 +1,26 @@
+-- delete and append are swapped
+-- you can think of as "a" for Anihilate
+-- and "d" for appenD (okay that's not as catchy)
+vim.cmd [[
+  " Swap delete and append keys
+  nnoremap a d
+  xnoremap a d
+  onoremap a d
+
+  nnoremap d a
+  xnoremap d a
+  onoremap d a
+
+  " Also swap capital versions
+  nnoremap A D
+  nnoremap D A
+
+  " Fix aa to behave like dd (delete line)
+  nnoremap aa dd
+  xnoremap aa dd
+]]
+
+--
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -167,8 +190,7 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
-  --lets put iron here
-  --
+  -- Iron REPL for Python:
   {
     'hkupty/iron.nvim',
     config = function()
@@ -220,6 +242,7 @@ require('lazy').setup({
     end,
   },
   -- Alternatively, use `config = function() ... end` for full control over the configuration.
+  --
   -- If you prefer to call `setup` explicitly, use:
   --    {
   --        'lewis6991/gitsigns.nvim',
@@ -859,17 +882,16 @@ require('lazy').setup({
       ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
         styles = {
-          comments = { italic = false }, -- Disable italics in comments
+          comments = { italic = true }, -- Disable italics in comments
         },
       }
-
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'retrobox'
+      -- vim.cmd.colorscheme 'retrobox'
     end,
   },
-
+  --
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
