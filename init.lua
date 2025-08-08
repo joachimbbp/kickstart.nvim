@@ -1,23 +1,18 @@
--- delete and append are swapped
--- you can think of as "a" for Anihilate
--- and "d" for appenD (okay that's not as catchy)
+-- s and d are swapped (sorry!)
 vim.cmd [[
-  " Swap delete and append keys
-  nnoremap a d
-  xnoremap a d
-  onoremap a d
+  nnoremap s d
+  xnoremap s d
+  onoremap s d
 
-  nnoremap d a
-  xnoremap d a
-  onoremap d a
+  nnoremap d s
+  xnoremap d s
+  onoremap d s
 
-  " Also swap capital versions
-  nnoremap A D
-  nnoremap D A
+  nnoremap S D
+  nnoremap D S
 
-  " Fix aa to behave like dd (delete line)
-  nnoremap aa dd
-  xnoremap aa dd
+  nnoremap ss dd
+  xnoremap ss dd
 ]]
 
 -- cyberdream stuff:
