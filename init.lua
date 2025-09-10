@@ -938,7 +938,7 @@ require('lazy').setup({
         --TEST:
         TEST = { icon = '⏲ ', color = 'test', alt = { 'TESTING', 'PASSED', 'FAILED' } },
         --SECTION:
-        SECTION = { icon = '󰚟', color = 'hint', alt = { '#' } },
+        SECTION = { icon = '󰚟', color = 'hint', alt = { '_' } },
       },
     },
   },
