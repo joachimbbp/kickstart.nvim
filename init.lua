@@ -938,7 +938,9 @@ require('lazy').setup({
         --TEST:
         TEST = { icon = '⏲ ', color = 'test', alt = { 'TESTING', 'PASSED', 'FAILED' } },
         --SECTION:
-        SECTION = { icon = '󰚟', color = 'hint', alt = { '_' } },
+        SECTION = { icon = '󰚟', color = '#3CA653', alt = { '_' } },
+        --LLM: used to tag LLM generated code
+        LLM = { icon = '', color = 'error', alt = { 'GPT', 'LLM Copypasta' } },
       },
     },
   },
