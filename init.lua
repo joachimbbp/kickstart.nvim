@@ -940,7 +940,7 @@ require('lazy').setup({
         --SECTION:
         SECTION = { icon = '󰚟', color = '#3CA653', alt = { '_' } },
         --LLM: used to tag LLM generated code
-        LLM = { icon = '', color = 'error', alt = { 'GPT', 'LLM Copypasta' } },
+        LLM = { icon = '', color = '#FAA00F', alt = { 'GPT', 'LLM Copypasta' } },
       },
     },
   },
