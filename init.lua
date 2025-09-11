@@ -945,8 +945,10 @@ require('lazy').setup({
         SECTION = { icon = '󰚟', color = Green, alt = { '_' } },
         --LLM: used to tag LLM generated code
         LLM = { icon = '', color = Orange, alt = { 'GPT', 'ROBOT', 'LLM BELOW' } },
-        LLMEND = { icon = '', color = Orange, alt = { 'LLM END', 'GPT END', 'ROBOT END', 'LLM ABOVE' } },
         --LLMEND: used to show the end of an LLM generated code block
+        LLMEND = { icon = '', color = Orange, alt = { 'LLM END', 'GPT END', 'ROBOT END', 'LLM ABOVE' } },
+        --HUMAN: for edits in LLM code blocks
+        HUMAN = { icon = '󱓨', color = Orange, alt = { 'HUMAN EDIT' } },
       },
     },
   },
