@@ -14,6 +14,10 @@ vim.cmd [[
   nnoremap ss dd
   xnoremap ss dd
 ]]
+--_: Colors
+Orange = '#FAA00F'
+
+Green = '#3CA653'
 
 -- cyberdream stuff:
 -- Add a custom keybinding to toggle the colorscheme
@@ -938,9 +942,11 @@ require('lazy').setup({
         --TEST:
         TEST = { icon = '⏲ ', color = 'test', alt = { 'TESTING', 'PASSED', 'FAILED' } },
         --SECTION:
-        SECTION = { icon = '󰚟', color = '#3CA653', alt = { '_' } },
+        SECTION = { icon = '󰚟', color = Green, alt = { '_' } },
         --LLM: used to tag LLM generated code
-        LLM = { icon = '', color = '#FAA00F', alt = { 'GPT', 'LLM Copypasta' } },
+        LLM = { icon = '', color = Orange, alt = { 'GPT', 'ROBOT', 'LLM BELOW' } },
+        LLMEND = { icon = '', color = Orange, alt = { 'LLM END', 'GPT END', 'ROBOT END', 'LLM ABOVE' } },
+        --LLMEND: used to show the end of an LLM generated code block
       },
     },
   },
