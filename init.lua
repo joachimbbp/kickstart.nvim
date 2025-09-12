@@ -16,7 +16,7 @@ vim.cmd [[
 ]]
 --_: Colors
 Orange = '#FAA00F'
-
+Hotpink = '#FA2070'
 Green = '#3CA653'
 
 -- cyberdream stuff:
@@ -944,11 +944,19 @@ require('lazy').setup({
         --SECTION:
         SECTION = { icon = '󰚟', color = Green, alt = { '_' } },
         --LLM: used to tag LLM generated code
-        LLM = { icon = '', color = Orange, alt = { 'GPT', 'ROBOT', 'LLM BELOW' } },
+        LLM = { icon = '', color = Orange, alt = { 'LLM START', 'GPT', 'ROBOT', 'ROBOT START', 'LLM BELOW' } },
         --LLMEND: used to show the end of an LLM generated code block
         LLMEND = { icon = '', color = Orange, alt = { 'LLM END', 'GPT END', 'ROBOT END', 'LLM ABOVE' } },
         --HUMAN: for edits in LLM code blocks
         HUMAN = { icon = '󱓨', color = Orange, alt = { 'HUMAN EDIT' } },
+        --QUESTION:
+        QUESTION = { icon = '󱍊', color = Hotpink, alt = { 'WONDER', 'Q', 'HMM', 'THOUGHT' } },
+        --LOCAL: used to tag local imports or other modules created by me (like zools)
+        LOCAL = { icon = '', color = Hotpink, alt = { 'HOUSE', 'MY SUBMODULE', 'MY GIT SUBMODULE' } },
+        --SUBMODULE: used to indicate a submodule created by someone other than me
+        SUBMODULE = { icon = '󰄛', color = 'error', alt = { 'GIT SUBMODULE', 'DEPENDENCY' } },
+        --DEPRECATED: code that works but you need to replace with something better
+        DEPRECATED = { icon = '', color = 'error', alt = { 'DEAD', 'KILL' } },
       },
     },
   },
