@@ -957,6 +957,12 @@ require('lazy').setup({
         SUBMODULE = { icon = '󰄛', color = 'error', alt = { 'GIT SUBMODULE', 'DEPENDENCY' } },
         --DEPRECATED: code that works but you need to replace with something better
         DEPRECATED = { icon = '', color = 'error', alt = { 'DEAD', 'KILL' } },
+        --NICE:
+        WIZARD = { icon = '󱑷', color = 'info', alt = { 'NICE' } },
+        --CLEAN:
+        CLEAN = { icon = '󰃢', color = 'warning', alt = { 'TIDY' } },
+        --CURSED:
+        CURSED = { icon = '', color = Orange, alt = { 'HORROR', 'GRIMOIRE' } },
       },
     },
   },
