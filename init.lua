@@ -236,14 +236,20 @@ require('lazy').setup({
         --Keymaps start with 'r' for 'REPL'
         keymaps = {
           --Keymaps start with 'r' for 'REPL'
+          --
+          restart_repl = '<space>rR', -- calls `IronRestart` to restart the repl
           send_motion = '<space>rc',
           visual_send = '<space>rc',
           send_file = '<space>rf',
           send_line = '<space>rl',
+          send_paragraph = '<space>rp',
+          send_until_cursor = '<space>ru',
           send_mark = '<space>rm',
-          mark_motion = '<space>ra',
-          mark_visual = '<space>rc',
-          remove_mark = '<space>rd',
+          send_code_block = '<space>rb',
+          send_code_block_and_move = '<space>rn',
+          mark_motion = '<space>mc',
+          mark_visual = '<space>mc',
+          remove_mark = '<space>md',
           cr = '<space>r<cr>',
           interrupt = '<space>r<space>',
           exit = '<space>rq',
