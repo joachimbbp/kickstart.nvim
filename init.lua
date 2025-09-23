@@ -964,11 +964,11 @@ require('lazy').setup({
         --DEPRECATED: code that works but you need to replace with something better
         DEPRECATED = { icon = '', color = 'error', alt = { 'DEAD', 'KILL' } },
         --NICE:
-        WIZARD = { icon = '󱑷', color = 'info', alt = { 'NICE' } },
+        WIZARD = { icon = '󱑷', color = 'info', alt = { 'NICE', 'GOOD', 'NIFTY' } },
         --CLEAN:
         CLEAN = { icon = '󰃢', color = 'warning', alt = { 'TIDY' } },
-        --CURSED:
-        CURSED = { icon = '', color = Orange, alt = { 'HORROR', 'GRIMOIRE' } },
+        --EXORCISE:
+        EXORCISE = { icon = '', color = Orange, alt = { 'CURSED', 'EXORCISM NEEDED', 'HORROR', 'GRIMOIRE' } },
       },
     },
   },
