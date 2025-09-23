@@ -950,11 +950,11 @@ require('lazy').setup({
         --SECTION:
         SECTION = { icon = '󰚟', color = Green, alt = { '_' } },
         --LLM: used to tag LLM generated code
-        LLM = { icon = '', color = Orange, alt = { 'LLM START', 'GPT', 'ROBOT', 'ROBOT START', 'LLM BELOW' } },
+        LLM = { icon = '', color = 'hint', alt = { 'LLM START', 'GPT', 'ROBOT', 'ROBOT START', 'LLM BELOW' } },
         --LLMEND: used to show the end of an LLM generated code block
-        LLMEND = { icon = '', color = Orange, alt = { 'LLM END', 'GPT END', 'ROBOT END', 'LLM ABOVE' } },
+        LLMEND = { icon = '', color = 'hint', alt = { 'LLM END', 'GPT END', 'ROBOT END', 'LLM ABOVE' } },
         --HUMAN: for edits in LLM code blocks
-        HUMAN = { icon = '󱓨', color = Orange, alt = { 'HUMAN EDIT' } },
+        HUMAN = { icon = '󱓨', color = 'hint', alt = { 'HUMAN EDIT' } },
         --QUESTION:
         QUESTION = { icon = '󱍊', color = Hotpink, alt = { 'WONDER', 'Q', 'HMM', 'THOUGHT' } },
         --LOCAL: used to tag local imports or other modules created by me (like zools)
