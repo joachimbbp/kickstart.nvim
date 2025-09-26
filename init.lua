@@ -960,7 +960,7 @@ require('lazy').setup({
         --LOCAL: used to tag local imports or other modules created by me (like zools)
         LOCAL = { icon = '', color = Hotpink, alt = { 'HOUSE', 'MY SUBMODULE', 'MY GIT SUBMODULE' } },
         --SUBMODULE: used to indicate a submodule created by someone other than me
-        SUBMODULE = { icon = '󰄛', color = 'error', alt = { 'GIT SUBMODULE', 'DEPENDENCY' } },
+        SUBMODULE = { icon = '󰄛', color = Hotpink, alt = { 'GIT SUBMODULE', 'DEPENDENCY' } },
         --DEPRECATED: code that works but you need to replace with something better
         DEPRECATED = { icon = '', color = 'error', alt = { 'DEAD', 'KILL' } },
         --NICE:
