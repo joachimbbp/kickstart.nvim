@@ -969,6 +969,8 @@ require('lazy').setup({
         CLEAN = { icon = '󰃢', color = 'warning', alt = { 'TIDY' } },
         --EXORCISE:
         EXORCISE = { icon = '', color = Orange, alt = { 'CURSED', 'EXORCISM NEEDED', 'HORROR', 'GRIMOIRE' } },
+        --SOURCE: https://brainder.org/tag/nifti/ (for example). This is used for citing sources
+        SOURCE = { icon = '󱓷', color = Green, alt = {} },
       },
     },
   },
