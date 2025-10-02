@@ -922,6 +922,7 @@ require('lazy').setup({
   },
   -- Highlight todo, notes, etc in comments
   {
+    --ICON SOURCE: https://nerdfonts.ytyng.com/
     'folke/todo-comments.nvim',
     event = 'VimEnter',
     dependencies = { 'nvim-lua/plenary.nvim' },
@@ -970,7 +971,9 @@ require('lazy').setup({
         --EXORCISE:
         EXORCISE = { icon = '', color = Orange, alt = { 'CURSED', 'EXORCISM NEEDED', 'HORROR', 'GRIMOIRE' } },
         --SOURCE: https://brainder.org/tag/nifti/ (for example). This is used for citing sources
-        SOURCE = { icon = '󱓷', color = Green, alt = {} },
+        SOURCE = { icon = '', color = Green, alt = {} },
+        --INSTRUCTIONS: for the user to do!
+        INSTRUCTIONS = { icon = '󱓷', color = 'test', alt = {} },
       },
     },
   },
