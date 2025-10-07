@@ -974,6 +974,8 @@ require('lazy').setup({
         SOURCE = { icon = '', color = Green, alt = {} },
         --INSTRUCTIONS: for the user to do!
         INSTRUCTIONS = { icon = '󱓷', color = 'test', alt = {} },
+        --WIP: Work in Progress
+        WIP = { icon = '', color = 'warning', alt = { 'WORK IN PROGRESS' } },
       },
     },
   },
